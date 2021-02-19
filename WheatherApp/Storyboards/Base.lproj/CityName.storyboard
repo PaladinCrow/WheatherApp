@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GrW-ei-Zw8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City Name-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="City Name" id="BYZ-38-t0r" customClass="CityNameViewController" customModule="WheatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Pq6-6M-Kus">
+                                <rect key="frame" x="30" y="400" width="354" height="96"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cl9-fA-9W1">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="42"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-YS-mgO">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="tZ7-Ue-W72"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6e-UH-zMR">
+                                                <rect key="frame" x="0.0" y="41" width="354" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="d70-OB-tNQ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="O6e-UH-zMR" firstAttribute="trailing" secondItem="Qne-YS-mgO" secondAttribute="trailing" id="KvN-QD-9oE"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qne-YS-mgO" secondAttribute="bottom" constant="2" id="Q5h-f7-ujp"/>
+                                            <constraint firstItem="O6e-UH-zMR" firstAttribute="leading" secondItem="Qne-YS-mgO" secondAttribute="leading" id="diT-A9-ysf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qne-YS-mgO" secondAttribute="trailing" id="l1J-ys-NqN"/>
+                                            <constraint firstAttribute="bottom" secondItem="O6e-UH-zMR" secondAttribute="bottom" id="lVD-VS-CL1"/>
+                                            <constraint firstItem="Qne-YS-mgO" firstAttribute="top" secondItem="Cl9-fA-9W1" secondAttribute="top" id="o3m-S5-cD5"/>
+                                            <constraint firstItem="Qne-YS-mgO" firstAttribute="leading" secondItem="Cl9-fA-9W1" secondAttribute="leading" id="roV-Y0-buI"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9SM-fo-Mto">
+                                        <rect key="frame" x="0.0" y="54" width="354" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2X8-HW-9JK" customClass="RoundedCornerButton" customModule="WheatherApp" customModuleProvider="target">
+                                                <rect key="frame" x="71" y="0.0" width="212" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="Lookup">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lookupCityWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mWB-NE-5Jw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2X8-HW-9JK" firstAttribute="top" secondItem="9SM-fo-Mto" secondAttribute="top" id="6kD-jb-fHj"/>
+                                            <constraint firstItem="2X8-HW-9JK" firstAttribute="centerX" secondItem="9SM-fo-Mto" secondAttribute="centerX" id="KQw-uZ-N5g"/>
+                                            <constraint firstAttribute="bottom" secondItem="2X8-HW-9JK" secondAttribute="bottom" id="cqu-rn-QLK"/>
+                                            <constraint firstItem="2X8-HW-9JK" firstAttribute="width" secondItem="9SM-fo-Mto" secondAttribute="width" multiplier="0.6" id="ojF-1C-NLu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pq6-6M-Kus" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9rN-jK-DXX"/>
+                            <constraint firstItem="Pq6-6M-Kus" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="sBi-Bf-ce7"/>
+                            <constraint firstItem="Pq6-6M-Kus" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wvC-Zh-TXK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7hL-dm-uFj"/>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="Qne-YS-mgO" id="c3c-0u-iZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500.00000000000006" y="47.544642857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ch0-gz-HAN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GrW-ei-Zw8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NSZ-rd-Xay">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xzh-Ak-ql1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dsV-Mm-q1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.24637681159425" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
